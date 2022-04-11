@@ -1,0 +1,18 @@
+template header
+
+ruleName
+city
+
+package com.foo.bar
+import com.nazzd.complex.seed.drools.entity.User
+
+template "debug test"
+
+rule "debug_@{ruleName}"
+    when
+        $user: User($user.getAddress == "@{city}")
+    then
+        System.out.println($user.getName() + "是个北漂");
+    end
+
+end template

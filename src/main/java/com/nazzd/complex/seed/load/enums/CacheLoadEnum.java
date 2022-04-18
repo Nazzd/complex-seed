@@ -1,7 +1,7 @@
 package com.nazzd.complex.seed.load.enums;
 
-import com.nazzd.complex.seed.load.entity.AbstractLoadData;
-import com.nazzd.complex.seed.load.entity.Demo;
+import com.nazzd.complex.seed.load.entity.AbstractCacheEntity;
+import com.nazzd.complex.seed.load.entity.DemoEntity;
 
 public enum CacheLoadEnum {
 
@@ -13,7 +13,7 @@ public enum CacheLoadEnum {
             "",
             "0 0/1 * * * ?",
             "0 0 1 * * ?",
-            Demo.class
+            DemoEntity.class
     );
 
     private Integer dataType;
@@ -30,9 +30,9 @@ public enum CacheLoadEnum {
 
     private String fullCornExpression;
 
-    private Class<? extends AbstractLoadData> clazz;
+    private Class<? extends AbstractCacheEntity> clazz;
 
-    CacheLoadEnum(Integer dataType, String cacheKey, String primaryKey, String sql, String conditionSql, String incrCornExpression, String fullCornExpression, Class<? extends AbstractLoadData> clazz) {
+    CacheLoadEnum(Integer dataType, String cacheKey, String primaryKey, String sql, String conditionSql, String incrCornExpression, String fullCornExpression, Class<? extends AbstractCacheEntity> clazz) {
         this.dataType = dataType;
         this.cacheKey = cacheKey;
         this.primaryKey = primaryKey;
@@ -99,11 +99,11 @@ public enum CacheLoadEnum {
         this.fullCornExpression = fullCornExpression;
     }
 
-    public Class<? extends AbstractLoadData> getClazz() {
+    public Class<? extends AbstractCacheEntity> getClazz() {
         return clazz;
     }
 
-    public void setClazz(Class<? extends AbstractLoadData> clazz) {
+    public void setClazz(Class<? extends AbstractCacheEntity> clazz) {
         this.clazz = clazz;
     }
 }

@@ -6,6 +6,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
+import java.util.Map;
+
 @Component
 @Slf4j
 public class SeedSpringContextUtil implements ApplicationContextAware {
@@ -28,5 +30,9 @@ public class SeedSpringContextUtil implements ApplicationContextAware {
 
     public static <T> T getBean(Class<T> clazz) {
         return getApplicationContext().getBean(clazz);
+    }
+
+    public static <T> Map<String, T> getBeansOfInterface(Class<T> clazz) {
+        return getApplicationContext().getBeansOfType(clazz);
     }
 }

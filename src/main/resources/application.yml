@@ -13,3 +13,16 @@ server:
   port: 8099
   servlet:
     context-path: /complex
+
+unit:
+  base:
+    10001:
+      id: 10001
+      poolSize: 3
+      queueSize: 20
+      timeOuts: 2000
+    10002:
+      id: 10001
+      poolSize: 3
+      queueSize: 20
+      timeOuts: 2000

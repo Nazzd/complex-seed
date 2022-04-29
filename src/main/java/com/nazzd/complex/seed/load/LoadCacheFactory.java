@@ -22,7 +22,7 @@ import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 
-@Component
+//@Component
 @Slf4j
 public class LoadCacheFactory {
 

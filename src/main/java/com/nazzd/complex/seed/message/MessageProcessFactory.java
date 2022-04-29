@@ -3,6 +3,7 @@ package com.nazzd.complex.seed.message;
 import com.nazzd.complex.seed.message.common.AbstractMessageResponse;
 import com.nazzd.complex.seed.utils.SeedSpringContextUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.core.ResolvableType;
 import org.springframework.stereotype.Component;
 
@@ -13,6 +14,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @Component
 @Slf4j
+@DependsOn(value = "seedSpringContextUtil")
 public class MessageProcessFactory {
 
     private Map<Integer, ICallbackProcess> processMap = new ConcurrentHashMap();

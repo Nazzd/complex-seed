@@ -71,7 +71,7 @@ public class MessageProcessor implements IMessageProcessor {
         });
     }
 
-    @KafkaListener(id = "", topics = "")
+    //@KafkaListener(id = "", topics = "")
     public void receiveMessage(String json, Acknowledgment acknowledgment) {
         log.info("[SEED]消费消息:{}", json);
         JSONObject jsonObject = JSONUtil.parseObj(json);

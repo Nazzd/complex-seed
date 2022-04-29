@@ -46,11 +46,11 @@ public abstract class AbstractHandler<T extends AbstractUnitReq, E extends Abstr
      */
     public void handle(Message message, Long miils) {
         try {
-            FutureTask<Message.Context.UnitData> unitDataFutureTask = new FutureTask<>(() -> new Message.Context.UnitData().setData(doHandle(message)));
+            /*FutureTask<Message.Context.UnitData> unitDataFutureTask = new FutureTask<>(() -> new Message.Context.UnitData().setData(doHandle(message)));
             unitDataFutureTask.run();
             Message.Context.UnitData unitData = unitDataFutureTask.get(miils, TimeUnit.MILLISECONDS);
             // 将结果填充到message中
-            message = buildSuccessResult(message, unitData);
+            message = buildSuccessResult(message, unitData);*/
 
             // 首先判断是否存在下一个单元
             // 如果存在 则获取下一个单元的消息队列,然后进行投递

@@ -8,6 +8,11 @@ spring:
   application:
     name: complex-seed
 
+nazzd:
+  seed:
+    web:
+      response-body-advice: false
+
 
 server:
   port: 8099

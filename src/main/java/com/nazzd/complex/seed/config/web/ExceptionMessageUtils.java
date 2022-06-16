@@ -66,7 +66,7 @@ public class ExceptionMessageUtils {
                 .map(errors -> errors.get(0))
                 .map(fieldError -> getBadRequestMessage(fieldError.getField(), fieldError.getDefaultMessage()))
                 .orElse(ExceptionType.BAD_REQUEST.getMessage());
-    }
+    } 
 
     /**
      * 根据字段名和校验结果获取最后的异常信息, 主要用于RequestBody, Form表单, RequestParam, PathVariable

@@ -5,12 +5,11 @@ import lombok.Data;
 import javax.validation.Valid;
 
 @Data
-@Valid
-public class UserAdd {
+public class UserAddAndUpdate {
 
     private String name;
 
     private String description;
 
-    private Integer isEnable;
+    private Boolean isEnable;
 }

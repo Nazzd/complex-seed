@@ -6,6 +6,9 @@ import com.nazzd.complex.seed.bo.UserAddAndUpdate;
 import com.nazzd.complex.seed.exception.ClientException;
 import com.nazzd.complex.seed.po.User;
 import com.nazzd.complex.seed.service.UserService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,13 +17,15 @@ import java.util.Objects;
 
 @RestController
 @RequestMapping("/system/user")
+@Api(tags = "系统管理-用户管理", value = "用户管理")
 public class UserController {
 
     @Resource
     private UserService userService;
 
+    @ApiOperation("新增用户")
     @PostMapping
-    public void addUser(@RequestBody @Validated UserAddAndUpdate userAddAndUpdate) {
+    public void addUser(@RequestBody @Validated @ApiParam(value = "用户新增对象", required = true) UserAddAndUpdate userAddAndUpdate) {
         userService.addUser(userAddAndUpdate);
     }
 

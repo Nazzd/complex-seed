@@ -10,6 +10,8 @@ import org.springframework.lang.Nullable;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
+import springfox.documentation.oas.web.OpenApiControllerWebMvc;
+import springfox.documentation.swagger.web.ApiResourceController;
 
 import javax.annotation.Resource;
 
@@ -24,7 +26,8 @@ public class RestResponseBodyAdvice implements ResponseBodyAdvice {
 
     @Override
     public boolean supports(MethodParameter returnType, Class converterType) {
-        return true;
+        //        return true;
+        return !returnType.getDeclaringClass().equals(ApiResourceController.class) && !returnType.getDeclaringClass().equals(OpenApiControllerWebMvc.class);
     }
 
     @Nullable

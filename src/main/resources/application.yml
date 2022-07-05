@@ -13,6 +13,8 @@ nazzd:
     web:
       response-body-advice: false
 
+swagger:
+  enabled: true
 
 server:
   port: 8099

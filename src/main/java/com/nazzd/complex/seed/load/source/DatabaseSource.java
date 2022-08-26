@@ -2,7 +2,7 @@ package com.nazzd.complex.seed.load.source;
 
 import com.nazzd.complex.seed.load.LoadCacheFactory;
 import com.nazzd.complex.seed.load.enums.CacheLoadEnum;
-import com.nazzd.complex.seed.service.LoadService;
+import com.nazzd.complex.seed.modules.auth.service.LoadService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.compress.utils.Lists;
 import org.springframework.context.annotation.Primary;

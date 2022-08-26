@@ -6,12 +6,11 @@ import cn.hutool.core.date.StopWatch;
 import com.google.common.collect.Lists;
 import com.nazzd.complex.seed.load.entity.AbstractCacheEntity;
 import com.nazzd.complex.seed.load.enums.DataCacheEnum;
-import com.nazzd.complex.seed.service.LoadService;
+import com.nazzd.complex.seed.modules.auth.service.LoadService;
 import com.nazzd.complex.seed.utils.SeedSpringContextUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;

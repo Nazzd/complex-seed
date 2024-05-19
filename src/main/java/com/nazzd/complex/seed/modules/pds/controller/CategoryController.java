@@ -9,7 +9,5 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(tags = "pds-分类管理", value = "分类管理")
 public class CategoryController {
 
-    public void addCategory(){
 
-    }
 }

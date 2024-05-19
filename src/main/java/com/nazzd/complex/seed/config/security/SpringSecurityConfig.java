@@ -37,7 +37,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                         "/webjars/**").permitAll()
                 .antMatchers("/login").permitAll()
                 // 其他请求都需要认证后才能访问
-                .anyRequest().authenticated()
+                //.anyRequest().authenticated()
                 // 使用自定义的 accessDecisionManager
                 //.accessDecisionManager(accessDecisionManager())
                 .and()
